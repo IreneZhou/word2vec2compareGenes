@@ -62,7 +62,7 @@ def main(model,bigram,trigram):
 			try:
 				s1 = keepOnlyWordsInModel (cleanASentence(entry_list[0].get()),model)
 				s2 = keepOnlyWordsInModel (cleanASentence(entry_list[1].get()),model)
-				result = hausdorffDistModWted (s1, s2,model) 
+				result = str(s1) + "\n" + str(s2) + "\n" + str(hausdorffDistModWted (s1, s2,model))
 			except Exception, e:
 				result = "words not found in trained data"
 		result_label["text"] = result
